@@ -1,0 +1,51 @@
+# General
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# ---------------------------------
+# Frontend (React Native / Expo)
+# ---------------------------------
+node_modules/
+.expo/
+dist/
+web-build/
+.jsc/
+.npm/
+
+# ---------------------------------
+# Backend (C# / .NET)
+# ---------------------------------
+bin/
+obj/
+.vs/
+*.user
+*.suo
+nupkg/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ---------------------------------
+# Python Backend
+# ---------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+.pytest_cache/
+
+# ---------------------------------
+# Data & Large Model Files (User Requested)
+# ---------------------------------
+*.csv
+*.keras
+*.pkl
+*.h5
+*.pb
+*.tflite
+*.joblib
