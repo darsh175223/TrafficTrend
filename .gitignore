@@ -28,15 +28,18 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
-# ---------------------------------
+# Environment Files
+.env
+.env.*
+.env.local
+!.env.example
+
 # Python Backend
-# ---------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
 venv/
 env/
-.env
 .pytest_cache/
 
 # ---------------------------------
@@ -49,3 +52,43 @@ env/
 *.pb
 *.tflite
 *.joblib
+
+# ---------------------------------
+# Excluded Frontend & Backend (User Requested)
+# ---------------------------------
+# Angular Frontend - entire directory excluded
+angular-frontend/
+
+# Spring Boot Backend - entire directory excluded
+SpringBootBackend/
+
+# ---------------------------------
+# Terraform (IaC)
+# ---------------------------------
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files (contain sensitive data)
+*.tfvars
+*.tfvars.json
+
+# Ignore override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Keep the example tfvars file
+!terraform.tfvars.example

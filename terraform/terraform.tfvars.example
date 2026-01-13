@@ -1,0 +1,45 @@
+# =============================================================================
+# TrafficTrend - Terraform Variables Example
+# =============================================================================
+# Copy this file to terraform.tfvars and fill in your values
+# NEVER commit terraform.tfvars to version control!
+# =============================================================================
+
+# General Configuration
+aws_region   = "us-west-2"
+environment  = "dev"
+project_name = "traffictrend"
+
+# RDS Configuration
+db_instance_class    = "db.t3.small"
+db_allocated_storage = 20
+db_name              = "traffictrend_db"
+db_username          = "admin"
+db_password          = "CHANGE_ME_secure_password_123!"
+
+# JWT Configuration
+jwt_secret   = "CHANGE_ME_your_super_secret_jwt_key_at_least_32_characters_long!"
+jwt_issuer   = "TrafficTrend"
+jwt_audience = "TrafficTrendUsers"
+
+# ECS Configuration - Auth Backend (.NET)
+auth_backend_cpu           = 512
+auth_backend_memory        = 1024
+auth_backend_desired_count = 2
+auth_backend_image_tag     = "latest"
+
+# ECS Configuration - Python AI Backend
+python_backend_cpu           = 1024
+python_backend_memory        = 2048
+python_backend_desired_count = 1
+python_backend_image_tag     = "latest"
+
+# ECS Configuration - Spring Boot Backend
+spring_backend_cpu           = 512
+spring_backend_memory        = 1024
+spring_backend_desired_count = 2
+spring_backend_image_tag     = "latest"
+
+# Frontend Configuration
+create_cloudfront = true
+domain_name       = "" # Optional: your custom domain
